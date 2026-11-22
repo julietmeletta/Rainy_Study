@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ghibli Study</title>
+<title>Rainy Study Room</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
 <link href="index.css" rel="stylesheet">
@@ -20,16 +20,14 @@
 
     <div class="header">
         <h1>Rainy Study Room</h1>
-        <h4>Come Rest & Study — No Procrastinating Allowed</h4>
+        <h4>Come Rest & Study — Stay Focused</h4>
     </div>
-
-    <h2>To Do List</h2>
 
     <div class="panel">
         <ul id="taskList"></ul>
 
         <input id="taskInput" placeholder="Add a task...">
-        <button onclick="addTask()">Add Task</button>
+        <button id="addTask" onclick="addTask()">Add Task</button>
 
         <div class="progress-container">
             <div class="progress-text">Progress</div>
@@ -43,9 +41,9 @@
 <div class="timer-widget">
     <div>Study Timer</div>
     <div id="time">25:00</div>
-    <button onclick="startTimer()">▶</button>
-    <button onclick="pauseTimer()">||</button>
-    <button onclick="resetTimer()">↺</button>
+    <button id="play" onclick="startTimer()">&#9654;</button>
+    <button id="pause" onclick="pauseTimer()">&#9208;</button>
+    <button id="reset" onclick="resetTimer()">&#10227;</button>
 </div>
 <script src = "s.js"></script>
 </body>

@@ -41,10 +41,6 @@ h4 {
     color: #2F3A4A;
 }
 
-h2 {
-    color: white;
-}
-
 .panel {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
@@ -65,6 +61,17 @@ li {
     border-left: 5px solid #3D5A99;
 }
 
+#taskList li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#taskList li h3 {
+    margin: 0;
+    margin-left: auto;
+    cursor: pointer;
+}
 input[type="checkbox"] {
     margin-right: 10px;
 }
@@ -77,11 +84,22 @@ input[type="checkbox"] {
     font-size: 16px;
 }
 
-button {
-    padding: 12px 18px;
+#addTask {
+    padding: 10px;
+    border: 1px solid #283593;
+    border-radius: 10px;
     background: #A4C8E1;
     color: white;
-    border: none;
+    cursor: pointer;
+}
+
+#play, #pause, #reset {
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    background: #A4C8E1;
+    color: white;
+    border: 1px solid #283593;
     border-radius: 10px;
     cursor: pointer;
 }

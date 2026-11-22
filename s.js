@@ -8,8 +8,8 @@ function addTask() {
 
     let item = document.createElement("li");
     item.innerHTML =
-        '<input type="checkbox" onclick="updateProgress()"> ' + taskText;
-
+        '<input type="checkbox" onclick="updateProgress()"> ' + taskText +
+        '<h3 onclick="deleteTask(this)">🗑</h3>';
     list.appendChild(item);
 
     input.value = "";
@@ -70,6 +70,11 @@ function updateProgress() {
     let percent = tasks.length ? (checked.length / tasks.length) * 100 : 0;
 
     document.getElementById("progressFill").style.width = percent + "%";
+}
+
+function deleteTask(element) {
+    element.parentElement.remove();
+    updateProgress();
 }
 
 updateProgress();
