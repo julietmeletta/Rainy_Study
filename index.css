@@ -3,7 +3,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 
-    min-height: 100vh;
     margin: 0;
     padding: 40px;
 
@@ -68,19 +67,21 @@ li {
 }
 
 #taskList li h3 {
-    margin: 0;
-    margin-left: auto;
+    margin: 0 10px;
     cursor: pointer;
 }
+
 input[type="checkbox"] {
     margin-right: 10px;
 }
 
 #taskInput {
-    width: 70%;
+    width: 83%;
     padding: 12px;
+    margin-right: 16px;
     border: 1px solid #3D5A99;
     border-radius: 10px;
+    font-family: "Zen Old Mincho", serif;
     font-size: 16px;
 }
 
@@ -91,6 +92,20 @@ input[type="checkbox"] {
     background: #A4C8E1;
     color: white;
     cursor: pointer;
+    font-family: "Zen Old Mincho", serif;
+}
+
+#addTask:hover, #play:hover, #pause:hover, #reset:hover {
+    background: #a4b4e1;
+}
+
+.dueDate {
+    width: 105px;
+    margin-left: auto;
+    font-family: "Zen Old Mincho", serif;
+    padding: 4px 8px;
+    border: 1px solid #3D5A99;
+    border-radius: 8px;
 }
 
 #play, #pause, #reset {
@@ -134,7 +149,7 @@ button:hover {
 }
 
 .progress-text {
-    font-size: 12px;
+    font-size: 15px;
     margin-bottom: 6px;
     color: #2F3A4A;
 }

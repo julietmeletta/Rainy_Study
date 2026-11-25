@@ -9,7 +9,7 @@ function addTask() {
     let item = document.createElement("li");
     item.innerHTML =
         '<input type="checkbox" onclick="updateProgress()"> ' + taskText +
-        '<h3 onclick="deleteTask(this)">🗑</h3>';
+        '<input class="dueDate" type="date">'+'<h3 onclick="deleteTask(this)">🗑</h3>';
     list.appendChild(item);
 
     input.value = "";
