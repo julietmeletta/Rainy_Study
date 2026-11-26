@@ -75,7 +75,7 @@ input[type="checkbox"] {
     margin-right: 10px;
 }
 
-#taskInput {
+#taskInput, #folderNameInput {
     width: 83%;
     padding: 12px;
     margin-right: 16px;
@@ -85,7 +85,14 @@ input[type="checkbox"] {
     font-size: 16px;
 }
 
-#addTask {
+#folderNameInput {
+    padding: 4px;
+    width: auto;
+    margin: auto;
+    margin-left: 12px;
+}
+
+#addTask, #newFolder, #addFolder {
     padding: 10px;
     border: 1px solid #283593;
     border-radius: 10px;
@@ -95,8 +102,20 @@ input[type="checkbox"] {
     font-family: "Zen Old Mincho", serif;
 }
 
-#addTask:hover, #play:hover, #pause:hover, #reset:hover {
-    background: #a4b4e1;
+#newFolder {
+    margin-bottom: 20px;
+}
+
+#addFolder {
+    padding: 4px;
+}
+
+#folderNameInput, #addFolder {
+    display: none;
+}
+
+#addTask:hover, #newFolder:hover, #addFolder:hover, #play:hover, #pause:hover, #reset:hover {
+    background: #283593;
 }
 
 .dueDate {

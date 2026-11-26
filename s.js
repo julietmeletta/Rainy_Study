@@ -16,9 +16,39 @@ function addTask() {
     updateProgress();
 }
 
+function newFolder() {
+    document.getElementById("folderNameInput").style.display = "inline-block";
+    document.getElementById("addFolder").style.display = "inline-block";
+}
+
+function addFolder() {
+    document.getElementById("folderNameInput").style.display = "none";
+    document.getElementById("addFolder").style.display = "none";
+    let input = document.getElementById("folderNameInput");
+    let taskText = input.value.trim();
+
+    if (taskText === "") return;
+
+    let list = document.getElementById("taskList");
+
+    let item = document.createElement("li");
+    item.innerHTML =
+        '<input type="checkbox" onclick="updateProgress()"> ' + taskText +
+        '<input class="dueDate" type="date">'+'<h3 onclick="deleteTask(this)">🗑</h3>';
+    list.appendChild(item);
+
+    input.value = "";
+    updateProgress();
+}
+
 document.getElementById("taskInput")
 .addEventListener("keydown", function(event) {
     if (event.key === "Enter") addTask();
+});
+
+document.getElementById("folderNameInput")
+.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") addFolder();
 });
 
 let timeLeft = 25 * 60;
